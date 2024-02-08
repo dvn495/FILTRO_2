@@ -1,0 +1,247 @@
+:root{
+    --estado-buda: 0.3s;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    margin-left: 80px;
+    margin-left: 80px;
+    transition: margin-left 0.3s ease-in-out;
+    font-size: 16px;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background-color: ghostwhite;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.icon__menu{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: ghostwhite;
+}
+
+.icon__user {
+    position: fixed;
+    right: 0;
+    padding-right: 10px;
+}
+
+.icon__menu img{
+    font-size: 80px;
+    cursor: pointer;
+    background-color: ghostwhite;
+}
+
+
+
+/*MENU DESPLEGABLE*/
+
+.menu__side{
+    width: 80px;
+    height: 100%;
+    background-color: ghostwhite;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 200;
+    border: 10px solid ghostwhite;
+    transition: all 0.3s ease-in-out;
+}
+
+.name__page{
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+
+}
+
+.name__page img{
+    width: 20px;
+    margin-right: 10px;
+
+}
+
+.options__menu{
+    padding: 20px 30px;
+    position: absolute;
+    top: 80px
+}
+
+.options__menu a{
+    cursor: default;
+    display: block;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.options__menu a:hover{
+    background-color: rgb(52, 97, 243);
+    border-radius: 5px;
+    color:white
+}
+
+.divider{
+    height: 200px;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.options__menu .option{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.options__menu .option img{
+    width: 20px;
+    margin-right: 20px;
+
+}
+
+.body_move{
+    margin-left: 300px;
+
+}
+
+.menu__side_move{
+    width: 300px;
+}
+
+
+
+/*Menu usuario*/
+
+.menu__user{
+    width: 150px;
+    height: 0px;
+    visibility: hidden;
+    background-color: ghostwhite;
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+    padding: 10px;
+    z-index: 200;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.options__menu_user .option_user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.options__menu_user a{
+    cursor: default;
+    display: block;
+    transition: color 0.3s;
+}
+
+.options__menu_user a:hover{
+    background-color: rgb(52, 97, 243);
+    border-radius: 5px;
+    color:white;
+
+}
+
+.menu__user_move{
+    height: 150px;
+    visibility: visible;
+}
+
+@media screen and (max-width: 760px){
+    .body_move{
+        margin-left: 0px;
+    }
+    .menu__side_move{
+        width: 80px;
+        left: -80px;
+    }
+}
+
+
+/*MENU PRINCIPAL*/
+
+.clothes{
+    position: fixed;
+    top: 100px;
+    padding-left: 50px;
+}
+.clothes__items{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr ;
+    gap: 20px;
+}
+main ul li{
+    list-style: none;
+}
+main ul .clothes__items__products{
+    display: grid;
+    width: 400px;
+    grid-template-rows: 400px 50px 40px;
+    margin: 0;
+    padding: 15px;
+    justify-content: center;
+    box-shadow:  5px 5px 5px rgba(0, 0, 0, 0.089);
+    border-radius: 8px;
+}
+main ul .clothes__items__products div{
+    display: flex;
+    justify-content: center;
+}
+main ul .clothes__items__products div .clothes__items__products--img {
+   overflow: hidden;
+}
+main ul .clothes__items__products .clothes__items__products--price{
+    display: flex;
+    justify-content: space-between;
+}
+main ul .clothes__items__products .clothes__items__products--price button{
+    padding: 10px;
+    font-family:'Times New Roman', Times, serif;
+    transition: all var(--estado-buda);
+}
+main ul .clothes__items__products .clothes__items__products--price button:hover{
+    background-color: rgba(2, 155, 27, 0.781);
+    transform: scale(1.1);
+}
+main ul .clothes__items__products .clothes__items__products--price h2{
+    color: red;
+    transition: all var(--estado-buda);
+}
+main ul .clothes__items__products .clothes__items__products--price h2:hover{
+    color: rgba(2, 155, 27, 0.781);
+}
+
+
